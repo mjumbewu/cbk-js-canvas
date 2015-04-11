@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <canvas width="300"  height="300" id="drawing"></canvas>
+  <canvas width="600"  height="300" id="drawing"></canvas>
   <script>
     var canvas = document.getElementById("drawing");
     var ctx = canvas.getContext("2d");
@@ -27,6 +27,10 @@
       circlex += 1;
       circley += 1;
     }, 30);
+
+    canvas.addEventListener("mousemove", function(evt) {
+      drawCircle(evt.x, evt.y);
+    });
   </script>
 </body>
 </html>
