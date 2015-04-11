@@ -13,15 +13,15 @@
     var canvas = document.getElementById("drawing");
     var ctx = canvas.getContext("2d");
 
-    ctx.beginPath();
-    ctx.arc(75, 75, 10, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fill();
+    function drawCircle(x, y) {
+      ctx.beginPath();
+      ctx.arc(x, y, 10, 0, Math.PI * 2, true);
+      ctx.closePath();
+      ctx.fill();
+    }
 
-    ctx.beginPath();
-    ctx.arc(100, 75, 10, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fill();
+    drawCircle(75, 75);
+    drawCircle(75, 100);
   </script>
 </body>
 </html>
