@@ -20,8 +20,13 @@
       ctx.fill();
     }
 
-    drawCircle(75, 75);
-    drawCircle(75, 100);
+    var circlex = 75;
+    var circley = 75;
+    setInterval(function() {
+      drawCircle(circlex, circley);
+      circlex += 1;
+      circley += 1;
+    }, 30);
   </script>
 </body>
 </html>
