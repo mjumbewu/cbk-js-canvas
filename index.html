@@ -28,8 +28,15 @@
       circley += 1;
     }, 30);
 
+    var isdrawing = false;
+    canvas.addEventListener("click", function(evt) {
+      isdrawing = !isdrawing;
+    });
+
     canvas.addEventListener("mousemove", function(evt) {
-      drawCircle(evt.x, evt.y);
+      if (isdrawing) {
+        drawCircle(evt.x, evt.y);
+      }
     });
   </script>
 </body>
